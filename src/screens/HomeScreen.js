@@ -1,17 +1,20 @@
 import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import LinearGradient from 'react-native-linear-gradient'
 import Loader from '../components/Loader'
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 import FontAwesome6 from "react-native-vector-icons/FontAwesome6"
 import AntDesign from "react-native-vector-icons/AntDesign"
 import Entypo from 'react-native-vector-icons/Entypo';
+import { ArtistContext } from '../context/ArtistContext'
+import ArtistCard from '../components/ArtistCard'
 
 
 const HomeScreen = () => {
+    const { artists, loading, error } = useContext(ArtistContext)
     return (
         <LinearGradient colors={['#040306', '#131624']} style={{ flex: 1 }}>
-            {/* <Loader /> */}
+            {/* {<Loader />} */}
             <ScrollView style={{ marginTop: 50 }}>
                 <View style={styles.header}>
                     <View style={styles.headerContent}>
@@ -39,9 +42,11 @@ const HomeScreen = () => {
 
                 </View>
 
-                <View>
+
+                {/*İnfo buttons */}
+                <View style={{ marginTop: 10 }} >
                     <Pressable style={styles.likedSongs}>
-                        <LinearGradient colors={['#33006F', '#FFFFFF']}  >
+                        <LinearGradient colors={['#33006F', '#FFFFFF']} style={styles.LinearGradient}   >
                             <Pressable style={{
                                 width: 55,
                                 height: 55,
@@ -59,7 +64,7 @@ const HomeScreen = () => {
 
                     </Pressable>
                     <Pressable style={styles.likedSongs}>
-                        <LinearGradient colors={['#33006F', '#FFFFFF']}  >
+                        <LinearGradient colors={['#33006F', '#FFFFFF']} style={styles.LinearGradient}  >
                             <Pressable style={{
                                 width: 55,
                                 height: 55,
@@ -77,7 +82,7 @@ const HomeScreen = () => {
 
                     </Pressable>
                     <Pressable style={styles.likedSongs}>
-                        <LinearGradient colors={['#33006F', '#FFFFFF']}  >
+                        <LinearGradient colors={['#33006F', '#FFFFFF']} style={styles.LinearGradient}  >
                             <Pressable style={{
                                 width: 55,
                                 height: 55,
@@ -95,6 +100,21 @@ const HomeScreen = () => {
 
                     </Pressable>
                 </View>
+
+                <Text style={styles.sectionTitle}> Your Top Artist</Text>
+
+                <ScrollView>
+                    {
+                        artists?.map((artist, index) => (
+                            <ArtistCard artist={artist} key={index} />
+
+
+                        ))
+                    }
+
+                </ScrollView>
+
+
 
 
 
@@ -160,7 +180,9 @@ const styles = StyleSheet.create({
         gap: 10,
         marginHorizontal: 10,
         marginVertical: 8,
-        backgroundColor: "#282828"
+        backgroundColor: "#282828",
+        borderRadius: 15
+
 
 
     },
@@ -168,6 +190,19 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 14,
         fontWeight: "600"
+
+    },
+    LinearGradient: {
+        borderRadius: 15
+
+    },
+    sectionTitle: {
+        color: "white",
+        marginHorizontal: 10,
+        fontSize: 20,
+        fontWeight: "bold",
+        marginTop: 10,
+
 
     }
 
