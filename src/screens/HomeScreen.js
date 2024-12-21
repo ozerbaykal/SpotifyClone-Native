@@ -27,10 +27,10 @@ const HomeScreen = () => {
                 {/* tab buttons */}
 
                 <View style={styles.tabButtons}>
-                    <Pressable sytle={styles.tabButton}>
+                    <Pressable style={styles.tabButton}>
                         <Text style={styles.tabButtonText}> Music</Text>
                     </Pressable   >
-                    <Pressable sytle={styles.tabButton}>
+                    <Pressable style={styles.tabButton}>
                         <Text style={styles.tabButtonText}>Poadcast & Shows</Text>
                     </Pressable>
 
@@ -77,10 +77,19 @@ const styles = StyleSheet.create({
 
     },
     tabButtons: {
-        flexDirection: "row"
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
+        marginVertical: 5,
+        marginHorizontal: 12,
 
     },
-    tabButton: {},
+    tabButton: {
+        backgroundColor: "#282828",
+        padding: 10,
+        borderRadius: 30
+
+    },
     tabButtonText: {
         color: "white",
         fontSize: 15,
