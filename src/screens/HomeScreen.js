@@ -4,6 +4,9 @@ import LinearGradient from 'react-native-linear-gradient'
 import Loader from '../components/Loader'
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 import FontAwesome6 from "react-native-vector-icons/FontAwesome6"
+import AntDesign from "react-native-vector-icons/AntDesign"
+import Entypo from 'react-native-vector-icons/Entypo';
+
 
 const HomeScreen = () => {
     return (
@@ -34,6 +37,63 @@ const HomeScreen = () => {
                         <Text style={styles.tabButtonText}>Poadcast & Shows</Text>
                     </Pressable>
 
+                </View>
+
+                <View>
+                    <Pressable style={styles.likedSongs}>
+                        <LinearGradient colors={['#33006F', '#FFFFFF']}  >
+                            <Pressable style={{
+                                width: 55,
+                                height: 55,
+
+                                justifyContent: "center",
+                                alignItems: "center",
+
+                            }}>
+                                <AntDesign name="heart" color="white" size={24} />
+                            </Pressable>
+
+
+                        </LinearGradient>
+                        <Text style={styles.likedSongsText}>Liked Songs</Text>
+
+                    </Pressable>
+                    <Pressable style={styles.likedSongs}>
+                        <LinearGradient colors={['#33006F', '#FFFFFF']}  >
+                            <Pressable style={{
+                                width: 55,
+                                height: 55,
+
+                                justifyContent: "center",
+                                alignItems: "center",
+
+                            }}>
+                                <Entypo name="moon" color="white" size={24} />
+                            </Pressable>
+
+
+                        </LinearGradient>
+                        <Text style={styles.likedSongsText}>Rock & Rol</Text>
+
+                    </Pressable>
+                    <Pressable style={styles.likedSongs}>
+                        <LinearGradient colors={['#33006F', '#FFFFFF']}  >
+                            <Pressable style={{
+                                width: 55,
+                                height: 55,
+
+                                justifyContent: "center",
+                                alignItems: "center",
+
+                            }}>
+                                <Entypo name="star" color="white" size={24} />
+                            </Pressable>
+
+
+                        </LinearGradient>
+                        <Text style={styles.likedSongsText}>Caz</Text>
+
+                    </Pressable>
                 </View>
 
 
@@ -94,5 +154,21 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 15,
     },
+    likedSongs: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
+        marginHorizontal: 10,
+        marginVertical: 8,
+        backgroundColor: "#282828"
+
+
+    },
+    likedSongsText: {
+        color: "white",
+        fontSize: 14,
+        fontWeight: "600"
+
+    }
 
 })
