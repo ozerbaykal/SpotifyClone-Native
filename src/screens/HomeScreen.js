@@ -12,6 +12,7 @@ import ArtistCard from '../components/ArtistCard'
 
 const HomeScreen = () => {
     const { artists, loading, error } = useContext(ArtistContext)
+    console.log(artists)
     return (
         <LinearGradient colors={['#040306', '#131624']} style={{ flex: 1 }}>
             {/* {<Loader />} */}
@@ -103,7 +104,7 @@ const HomeScreen = () => {
 
                 <Text style={styles.sectionTitle}> Your Top Artist</Text>
 
-                <ScrollView>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                     {
                         artists?.map((artist, index) => (
                             <ArtistCard artist={artist} key={index} />

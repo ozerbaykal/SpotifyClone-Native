@@ -9,6 +9,7 @@ const ArtistProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+
     const getArtist = async () => {
         const options = {
             method: 'GET',
@@ -27,7 +28,8 @@ const ArtistProvider = ({ children }) => {
 
         try {
             const response = await axios.request(options);
-            const data = response.data.artist.items;
+            const data = response.data.artists.items
+
             setArtist(data);
             setLoading(false)
 
@@ -42,7 +44,7 @@ const ArtistProvider = ({ children }) => {
 
     }
     useEffect(() => {
-        //getArtist()
+        getArtist()
 
 
     }, [])
