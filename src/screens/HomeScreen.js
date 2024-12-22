@@ -17,6 +17,7 @@ import { ArtistContext } from '../context/ArtistContext';
 import ArtistCard from '../components/ArtistCard';
 import { AlbumContext } from '../context/AlbumContext';
 import AlbumCard from '../components/AlbumCard';
+import Error from '../components/Error';
 
 const HomeScreen = () => {
     const { artists, loading, error } = useContext(ArtistContext);
@@ -28,7 +29,6 @@ const HomeScreen = () => {
 
     return (
         <LinearGradient colors={['#040306', '#131624']} style={{ flex: 1 }}>
-            {/* {<Loader />} */}
             <ScrollView style={{ marginTop: 50 }}>
                 <View style={styles.header}>
                     <View style={styles.headerContent}>
@@ -110,30 +110,31 @@ const HomeScreen = () => {
                     </Pressable>
                     <Text style={styles.sectionTitle}> Your Top Artist</Text>
 
-                    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                        {artists?.map((artist, index) => (
-                            <ArtistCard artist={artist} key={index} />
-                        ))}
-                    </ScrollView>
+                    {loading ? (
+                        <Loader />
+                    ) : error ? (
+                        <Error error={error} />
+                    ) : (
+                        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                            {artists?.map((artist, index) => (
+                                <ArtistCard artist={artist} key={index} />
+                            ))}
+                        </ScrollView>
+                    )}
                     <View style={{ height: 10 }} />
-
                     <Text style={styles.albumText}>Populer Albüms</Text>
 
-                    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                        {
-                            albums?.map((album, index) => (
+                    {albumsLoading ? (
+                        <Loader />
+                    ) : albumsError ? (
+                        <Error error={albumsError} />
+                    ) : (
+                        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                            {albums?.map((album, index) => (
                                 <AlbumCard key={index} album={album} />
-
-                            ))
-
-
-                        }
-
-
-                    </ScrollView>
-
-
-
+                            ))}
+                        </ScrollView>
+                    )}
                 </View>
             </ScrollView>
         </LinearGradient>
@@ -210,9 +211,8 @@ const styles = StyleSheet.create({
     },
     albumText: {
         fontSize: 20,
-        color: "white",
-        fontWeight: "bold",
+        color: 'white',
+        fontWeight: 'bold',
         marginHorizontal: 10,
-
-    }
+    },
 });
