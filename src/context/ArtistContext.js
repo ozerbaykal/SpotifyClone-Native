@@ -11,6 +11,7 @@ const ArtistProvider = ({ children }) => {
 
 
     const getArtist = async () => {
+
         const options = {
             method: 'GET',
             url: 'https://spotify23.p.rapidapi.com/search/',
