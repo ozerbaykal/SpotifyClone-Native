@@ -8,7 +8,7 @@ const ArtistCard = ({ artist }) => {
                     source={{
                         uri:
                             artist?.data?.visuals?.avatarImage?.sources?.[0]?.url ||
-                            'fallback-image-url',
+                            'https://lh5.googleusercontent.com/proxy/z8ZnpVeh7pBZzjRpSzf84No758IYunlB0tAwsdbsAaoVaqDUv3OVcXCt633gFvj6hb6IoXjQsJ9h5HVx-xJycMkzkL0w4Js4EiZMn9yDozmk0g',
                     }}
                     style={styles.artistImage}
                 />

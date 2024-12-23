@@ -1,15 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 
-const LikedSongScreen = () => {
+const SongScreen = () => {
 
     return (
         <View>
-            <Text>LikedSongScreen</Text>
+            <Text>SongScreen</Text>
         </View>
     )
 }
 
-export default LikedSongScreen
+export default SongScreen
 
 const styles = StyleSheet.create({})

@@ -25,7 +25,6 @@ const SongInfoScreen = ({ route }) => {
 
     return (
         <LinearGradient colors={['#040206', '#131624']} style={{ flex: 1 }}>
-            <Text>SongInfoScreen</Text>
 
             <ScrollView style={styles.scrollView}>
                 <View style={styles.paddingView}>
@@ -52,8 +51,8 @@ const SongInfoScreen = ({ route }) => {
                     </Pressable>
 
                     <View style={styles.playButtonView}>
-                        <MaterialCommunityIcons
-                            name="cross-bolnisi"
+                        <Entypo
+                            name="crop"
                             size={24}
                             color="#1DB954"
                         />
@@ -64,15 +63,15 @@ const SongInfoScreen = ({ route }) => {
                     </View>
                 </Pressable>
 
-                <View>
-                    <View style={styles.infoWiew}>
-                        <View style={styles.infoContainer}>
-                            <Text style={styles.infoText}>Album {name} </Text>
-                            <Text style={styles.infoText}>Artist {artist} </Text>
-                        </View>
-                        <Entypo name="dots-three-vertical" size={24} color="white" />
+
+                <View style={styles.infoWiew}>
+                    <View style={styles.infoContainer}>
+                        <Text style={styles.infoText}>Album {name} </Text>
+                        <Text style={styles.infoText}>Artist {artist} </Text>
                     </View>
+                    <Entypo name="dots-three-vertical" size={24} color="white" />
                 </View>
+
             </ScrollView>
         </LinearGradient>
     );
