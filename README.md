@@ -1,4 +1,4 @@
-# Spotify Clone (React Native)
+# Spotify-Clone-(React Native)
 
 This project is a Spotify Clone built using React Native. The application fetches data from RapidAPI and allows users to browse and play popular music. It mimics the basic functionality and design of Spotify, providing a seamless user experience.
 
