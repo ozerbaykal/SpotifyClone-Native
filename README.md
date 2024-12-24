@@ -6,19 +6,31 @@ This project is a Spotify Clone built using React Native. The application fetche
 
 ### Video GIF
 
-![](./src/assets/context.gif)
+![](./src/assets/images/spotifyclonerecord.gif)
 
-### UserListScreen
+### LoginScreen
 
-![](./src/assets/userlist.png)
+![](./src/assets/images/loginScreen.png)
 
-### UserDetailScreen
+### HomeScreen
 
-![](./src/assets/userDetail.png)
+![](./src/assets/images/homeScreen.png)
 
-### TaskScreen
+### ProfileScreen
 
-![](./src/assets/taskscreen.png)
+![](./src/assets/images/profileScreen.png)
+
+### SongInfoScreen
+
+![](./src/assets/images/songInfoScreen.png)
+
+### SongScreen
+
+![](./src/assets/images/songScreen.png)
+
+### Modal
+
+![](./src/assets/images/modal.png)
 
 ## Features
 
@@ -79,7 +91,7 @@ Follow these steps to run the project on your local machine:
 Clone the Repository:
 
 ```
-git clone https://github.com/your-username/spotify-clone-react-native.git
+git clone https://github.com/ozerbaykal/SpotifyClone-Native.git
 ```
 
 Navigate to the Project Directory:
@@ -132,4 +144,4 @@ Contributions are welcome! Please open an issue first to discuss what you would 
 
 **Özer BAYKAL**  
 Email: [baykalozer87@gmail.com](mailto:baykalozer87@gmail.com)  
-Project Link: [Movie App on GitHub](https://github.com/your-username/spotify-clone-react-native)
+Project Link: [spotifyCloneReactNative](https://github.com/ozerbaykal/spotify-clone-react-native)
