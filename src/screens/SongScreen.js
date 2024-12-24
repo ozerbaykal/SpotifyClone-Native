@@ -38,7 +38,7 @@ const SongScreen = () => {
             method: 'GET',
             url: 'https://shazam.p.rapidapi.com/search',
             params: {
-                term: 'Tarkan',
+                term: searchText,
                 locale: 'tr-TR',
                 offset: '0',
                 limit: '5',

@@ -1,79 +1,135 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Spotify Clone (React Native)
 
-# Getting Started
+This project is a Spotify Clone built using React Native. The application fetches data from RapidAPI and allows users to browse and play popular music. It mimics the basic functionality and design of Spotify, providing a seamless user experience.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Screenshots 🖼️
 
-## Step 1: Start the Metro Server
+### Video GIF
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+![](./src/assets/context.gif)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### UserListScreen
 
-```bash
-# using npm
-npm start
+![](./src/assets/userlist.png)
 
-# OR using Yarn
-yarn start
+### UserDetailScreen
+
+![](./src/assets/userDetail.png)
+
+### TaskScreen
+
+![](./src/assets/taskscreen.png)
+
+## Features
+
+- Browse Popular Music: Users can explore a curated list of trending and popular tracks.
+
+- Play Music: Tap on any track to play music directly in the app.
+
+- Dynamic Data Fetching: Fetches real-time data from RapidAPI to display up-to-date music information.
+
+- User-Friendly Interface: The app features an intuitive and visually appealing design inspired by Spotify.
+
+## Technologies Used
+
+- React Native: For building the cross-platform mobile application.
+
+- RapidAPI: To fetch music data and metadata.
+
+- React Navigation: For smooth navigation between different screens (if applicable).
+
+- State Management: Managed using CONTEXTAPI and React's built-in state management tools (e.g., useState, useEffect).
+
+- Icons and Styling: Utilizes libraries like React Native Vector Icons and custom styling for a polished look.
+
+## Libraries and Dependencies
+
+Here are the libraries and dependencies used in this project:
+
+- @react-navigation/bottom-tabs: ^7.2.0
+
+- @react-navigation/native: ^7.0.14
+
+- @react-navigation/native-stack: ^7.2.0
+
+- axios: ^1.7.9
+-
+- lodash: ^4.17.21
+
+- react: 18.3.1
+
+- react-native: 0.75.4
+
+- react-native-linear-gradient: ^2.8.3
+
+- react-native-modal: ^13.0.1
+
+- react-native-safe-area-context: ^5.0.0
+
+- react-native-screens: ^4.4.0
+
+- react-native-track-player: ^4.1.1
+
+- react-native-vector-icons: ^10.2.0
+
+## Installation
+
+Follow these steps to run the project on your local machine:
+
+Clone the Repository:
+
+```
+git clone https://github.com/your-username/spotify-clone-react-native.git
 ```
 
-## Step 2: Start your Application
+Navigate to the Project Directory:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```
+cd spotify-clone-react-native
 ```
 
-### For iOS
+Install Dependencies:
 
-```bash
-# using npm
-npm run ios
+```
+npm install
 
-# OR using Yarn
-yarn ios
+# or
+
+yarn install
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Start the Metro Bundler:
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+```
+npx react-native start
+```
 
-## Step 3: Modifying your App
+Run the Application:
 
-Now that you have successfully run the app, let's modify it.
+For iOS:
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+```
+npx react-native run-ios
+```
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+For Android:
 
-## Congratulations! :tada:
+```
+npx react-native run-android
+```
 
-You've successfully run and modified your React Native App. :partying_face:
+## Contributing
 
-### Now what?
+Contributions are welcome! Please open an issue first to discuss what you would like to change.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+- 1.Fork the project
+- 2.Create your feature branch (git checkout -b feature/NewFeature)
+- 3.Commit your changes (git commit -m 'Add new feature')
+- 4.Push to the branch (git push origin feature/NewFeature)
+- 5.Open a Pull Request
 
-# Troubleshooting
+## Contact 📬
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Özer BAYKAL**  
+Email: [baykalozer87@gmail.com](mailto:baykalozer87@gmail.com)  
+Project Link: [Movie App on GitHub](https://github.com/your-username/spotify-clone-react-native)
